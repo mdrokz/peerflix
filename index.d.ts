@@ -25,4 +25,4 @@ declare function truthy(): boolean;
 
 declare function createServer(e: TorrentStream.TorrentEngine): Server;
 
-export default function (torrent: Magnet, opts: PeerFlixOpts);
+export = function (torrent: Magnet, opts: PeerFlixOpts): TorrentStream.TorrentEngine { }
