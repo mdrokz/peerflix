@@ -25,4 +25,8 @@ declare function truthy(): boolean;
 
 declare function createServer(e: TorrentStream.TorrentEngine): Server;
 
-export = function (torrent: Magnet, opts: PeerFlixOpts): TorrentStream.TorrentEngine { }
+type PeerFlix = (torrent: Magnet, opts: PeerFlixOpts) => TorrentStream.TorrentEngine;
+
+declare const peerflix: PeerFlix;
+
+export = peerflix;
